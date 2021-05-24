@@ -1,0 +1,33 @@
+/*.ununderline {
+	text-decoration: none;
+}*/
+.top-pad-home {
+	padding-top:20px;
+}
+
+.divider-help {
+	width: 80%;
+}
+
+.hero { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/Honeycomb-02.svg');
+    background-size: cover;
+}
+
+.hero::before {
+    content: "";
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.25);
+}
+
+.logo-filter {
+  /*filter: invert(100%) sepia(93%) saturate(14%) hue-rotate(295deg) brightness(105%) contrast(100%);*/
+  filter: invert(8%) sepia(17%) saturate(1070%) hue-rotate(193deg) brightness(98%) contrast(94%);
+  width:150px;
+}
