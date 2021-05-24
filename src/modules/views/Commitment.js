@@ -64,9 +64,9 @@ const styles = (theme) => ({
     display: 'flex',
     flexDirection: 'row',
     height: 'auto',
-    width: '80%',
+    width: '100%',
     maxWidth:'450px',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
     paddingTop: '10px',
   },
@@ -76,9 +76,10 @@ const styles = (theme) => ({
     height:'auto',
   },
   pillar: {
-    width: '33.3%',
     align: 'center',
     justifyContent: 'center',
+    minWidth:'110px',
+    fontSize: '18px',
   }
 });
 

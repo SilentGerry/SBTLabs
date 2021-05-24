@@ -1,7 +1,7 @@
 import withRoot from './modules/withRoot';
 // --- Post bootstrap -----
-import React from 'react';
-import { Link } from "react-router-dom";
+import React, {useState} from 'react';
+import { Link, Redirect } from "react-router-dom";
 import {
   Box,
   Button,
@@ -45,20 +45,26 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+
 function SignIn(props) {
   const classes = useStyles();
+
+  const [empEmailSent, setEmpEmailSent] = useState(false);
 
   function sendEmail(e) {
     emailjs.init("user_YUA1db7jgxQAdA13IE9sC");
     e.preventDefault();
-    console.log(emailjs);
-    emailjs.sendForm('service_b8yqh3m', 'template_prlzb3x', e.target, 'user_YUA1db7jgxQAdA13IE9sC')
+    emailjs.sendForm('service_b8yqh3m', 'template_2gi006p', e.target, 'user_YUA1db7jgxQAdA13IE9sC')
       .then((result) => {
           console.log(result.text);
-          props.handlePop();
+          setEmpEmailSent(true);
       }, (error) => {
           console.log(error.text);
       });
+  }
+
+  if(empEmailSent) {
+    return <Redirect to='/' />
   }
 
   return (

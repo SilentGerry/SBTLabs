@@ -23,6 +23,7 @@ const styles = (theme) => ({
   placeholder: toolbarStyles(theme).root,
   toolbar: {
     justifyContent: "space-between",
+    paddingLeft: '0',
   },
   left: {
     flex: 1,
@@ -36,9 +37,13 @@ const styles = (theme) => ({
     justifyContent: "flex-end",
   },
   rightLink: {
-    fontSize: 16,
+    fontSize: '2.5vw',
     color: theme.palette.primary.dark,
     marginLeft: theme.spacing(3),
+    whiteSpace: 'nowrap',
+    [theme.breakpoints.up('sm')]: {
+      fontSize: 16,
+    },
   },
   linkSecondary: {
     color: theme.palette.secondary.main,
@@ -66,7 +71,7 @@ function AppAppBar(props) {
       <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
           <Link to={"/"} className={classes.link}>
-            <img className={classes.logo} src="/SBT-logo-black.svg" width={100} alt="Logo" class="logo-filter"/>
+            <img className={classes.logo} src="/SBT-logo-black.svg" width="5vw" alt="Logo" class="logo-filter"/>
           </Link>
           <div className={classes.right}>
             <Link to={"/"} className={classes.link}>

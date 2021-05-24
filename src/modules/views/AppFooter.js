@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
   },
-  link: {
+  a: {
     textDecoration: 'none',
     color: theme.palette.common.white,
     '&:hover': {
@@ -130,46 +130,40 @@ export default function AppFooter() {
             <div className={classes.reach}>
               <LocationOnIcon className={classes.icon} />
               <Typography className={classes.title}>Address</Typography>
-              <Link className={classes.cont}>
-                <Typography align='center'>
+                <a className={classes.a} align='center'  href="https://www.google.com/maps/place/SBT+Labs/@33.7823142,-118.1636036,15z/data=!4m5!3m4!1s0x0:0xdf735fa99b01a045!8m2!3d33.7824771!4d-118.1636036">
                  2338 E. Anaheim St.
                     Suite 202B,
                     Long Beach,
                     CA 90804
-                </Typography>
-              </Link>
+                </a>
             </div>
           </Grid>
           <Grid item xs={12} sm={4}>
             <div className={classes.reach}>
               <PhoneIcon className={classes.icon} />
               <Typography className={classes.title}>Phone</Typography>
-              <Link className={classes.cont}>
-                <Typography align='center'>
+                <a className={classes.a} href="tel:562 800 7420" align='center'>
                   (562) 800-7420
-                </Typography>
-              </Link>
+                </a>
             </div>
           </Grid>
           <Grid item xs={12} sm={4}>
             <div className={classes.reach}>
               <EmailIcon className={classes.icon} />
               <Typography className={classes.title}>Email</Typography>
-              <Link className={classes.cont}>
-                <Typography align='center'>
+                <a className={classes.a} component='a' align='center' href="mailto:contactus@sbtlabs.com">
                 contactus@sbtlabs.com
-                </Typography>
-              </Link>
+                </a>
             </div>
           </Grid>
         </Grid>
       </Container>
       <section className={classes.bottom}>
         <div className={classes.botlinks}>
-          <Link to="/terms" className={classes.link}>
+          <Link to="/terms" className={classes.a}>
             <Typography style={{fontSize:'12px', paddingRight:'8px'}}>Terms & Conditions</Typography>
           </Link>
-          <Link to="/privacy" className={classes.link}>
+          <Link to="/privacy" className={classes.a}>
             <Typography style={{fontSize:'12px'}}>Privacy Policy</Typography>
           </Link>
         </div>
